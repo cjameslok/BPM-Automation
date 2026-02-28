@@ -6,20 +6,36 @@ on run {input, parameters}
 			set selectedTracks to selection
 			
 			-- Get user input for the BPM value
-			display dialog "Please enter the BPM for the selected track(s):" default answer ""
+			display dialog "Please enter the BPM for the selected track(s)" default answer ""
 			set bpm_string to text returned of result
 			
 			try
 				-- Convert the input string to an integer
 				set bpm_integer to (bpm_string as integer)
-				
 				if bpm_integer ≤ 0 then error
 				
 				-- Loop through each selected track and set its name
 				repeat with aTrack in selectedTracks
+					set old_name to name of aTrack
+					-- Remove any leading 'number - ' pattern from the name
+					set AppleScript's text item delimiters to {" - "}
+					set name_subsets to text items of old_name
+					if (count of name_subsets) > 1 and (first item of name_subsets) is not "" then
+						try
+							-- extract the substring after the leading 'number - ' pattern 
+							set current_num to (first item of name_subsets) as integer
+							set new_base_name to (items 2 thru -1 of name_subsets) as text
+						on error
+							set new_base_name to old_name
+						end try
+					else
+						set new_base_name to old_name
+					end if
+					set AppleScript's text item delimiters to ""
+					set new_name to bpm_string & " - " & new_base_name
 					set bpm of aTrack to bpm_integer
-					set name of aTrack to bpm_string & " - " & name of aTrack
-					display notification "BPM set to " & bpm_integer & " for track: " & name of aTrack
+					set name of aTrack to new_name
+					display notification "BPM set to " & bpm_integer & " for track: " & new_name
 				end repeat
 				
 			on error
