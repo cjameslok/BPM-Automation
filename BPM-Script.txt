@@ -1,0 +1,33 @@
+on run {input, parameters}
+	
+	tell application "Music"
+		-- Check if any track is selected
+		if selection is not {} then
+			set selectedTracks to selection
+			
+			-- Get user input for the BPM value
+			display dialog "Please enter the BPM for the selected track(s):" default answer ""
+			set bpm_string to text returned of result
+			
+			try
+				-- Convert the input string to an integer
+				set bpm_integer to (bpm_string as integer)
+				
+				if bpm_integer ≤ 0 then error
+				
+				-- Loop through each selected track and set its name
+				repeat with aTrack in selectedTracks
+					set bpm of aTrack to bpm_integer
+					set name of aTrack to bpm_string & " - " & name of aTrack
+					display notification "BPM set to " & bpm_integer & " for track: " & name of aTrack
+				end repeat
+				
+			on error
+				display dialog "Invalid input: Positive numerical values only."
+			end try
+		else
+			display dialog "Select a track first." buttons {"OK"} default button 1
+		end if
+	end tell
+	
+end run
