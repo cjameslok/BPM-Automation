@@ -11,15 +11,10 @@ This AppleScript allows you to quickly set the BPM (Beats Per Minute) metadata f
 ## How to Use
 
 ### 1. Download the Automator Workflow
-1. Download this repo as a zip onto your mac.
-2. Open the downloaded folder and double-click the file called `BPM_Automation.workflow`
-3. You will be prompted to install the quick action. Click install.
-4. Click install a second time.
-Download the Automator workflow file (e.g., `Set BPM.workflow`).
-2. If the workflow is provided as a ZIP file, unzip it to extract the `.workflow` file.
+1. Get the latest release from [Github Releases](https://github.com/cjameslok/BPM-Automation/releases)
 
 ### 2. Install the Workflow
-1. Double-click the `Set BPM.workflow` file.
+1. Double-click the `BPM_Automation.workflow` file.
 2. Automator will open and prompt you twice to install the workflow as a Quick Action.
 3. System Settings should open automatically to **Services**, go to set 3.4
 
