@@ -2,6 +2,8 @@
 
 This AppleScript allows you to quickly set the BPM (Beats Per Minute) metadata for selected tracks in the Apple Music app and updates the track name to include the BPM value. If the track name already contains a BPM value at the start (e.g., "120 - Song Title"), it will be replaced with the new BPM.
 
+[Download here](https://cjameslok.github.io/BPM-Automation/)
+
 ## Features
 - Prompts for a BPM value and applies it to all selected tracks in Apple Music.
 - Updates the track name to include the BPM at the start (e.g., "128 - Song Title").
