@@ -286,7 +286,7 @@ code {
     max-width: 60px;
     height: 60px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    border-radius: 50%;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -486,6 +486,7 @@ code {
         max-width: 48px;
         height: 48px;
         font-size: 22px;
+        border-radius: 10px;
     }
 
     .step-content h3 {
@@ -558,6 +559,7 @@ code {
         height: 40px;
         font-size: 18px;
         padding: 0;
+        border-radius: 8px;
     }
 
     .features-grid {
