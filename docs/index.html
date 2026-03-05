@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPM Automator - Apple Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">♪</span>
+                <h1>BPM Automator</h1>
+            </div>
+            <p class="tagline">Automate BPM metadata for Apple Music</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Set BPM for Your Favorite Tracks</h2>
+            <p>A powerful AppleScript workflow that automatically updates BPM metadata and track names in Apple Music.</p>
+            <a href="https://github.com/cjameslok/BPM-Automation/releases/download/0.1.0/BPM_Automation.workflow.zip" class="btn btn-primary" download>
+                <span class="download-icon">⬇</span>
+                Download Workflow
+            </a>
+        </section>
+
+        <section class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Setup</h3>
+                    <p>Easily install as a Quick Action on your Mac with just a few clicks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Batch Processing</h3>
+                    <p>Update BPM for multiple tracks at once with a single keyboard shortcut.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <h3>Smart Renaming</h3>
+                    <p>Automatically updates track names to include BPM (e.g., "128 - Song Title").</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Replace Existing</h3>
+                    <p>Replaces existing BPM values if tracks already have them in the name.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-to">
+            <h2>How to Use</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Download the Workflow</h3>
+                    <p>Click the download button above to get the latest version of <code>BPM_Automation.workflow.zip</code> from our GitHub releases.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Install the Workflow</h3>
+                    <p>Double-click the <code>BPM_Automation.workflow</code> file on your Mac. The Quick Action Installer will open and guide you through the installation process.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Assign a Keyboard Shortcut</h3>
+                    <ol>
+                        <li>Open <strong>System Settings</strong> (or <strong>System Preferences</strong>)</li>
+                        <li>Go to <strong>Keyboard > Keyboard Shortcuts</strong></li>
+                        <li>Select <strong>Services</strong> (or <strong>Quick Actions</strong>)</li>
+                        <li>Find <code>BPM_Automation</code> in the list under <strong>General</strong></li>
+                        <li>Assign a custom keyboard shortcut (e.g., <code>⌥⌘B</code>)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Start Using It</h3>
+                    <p>Open Apple Music, select one or more tracks, and press your keyboard shortcut. Enter the desired BPM when prompted, and the script will handle the rest!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="requirements">
+            <h2>Requirements & Troubleshooting</h2>
+            <div class="requirements-box">
+                <h3>⚙️ System Requirements</h3>
+                <ul>
+                    <li>macOS with Apple Music app</li>
+                    <li>Automator (included with macOS)</li>
+                </ul>
+            </div>
+
+            <div class="requirements-box">
+                <h3>🔧 Permissions</h3>
+                <p>Make sure you have granted the necessary permissions:</p>
+                <ul>
+                    <li>Go to <strong>System Settings > Security & Privacy > Privacy > Automation</strong></li>
+                    <li>Grant permissions for both <strong>Automator</strong> and <strong>Apple Music</strong></li>
+                </ul>
+            </div>
+
+            <div class="requirements-box">
+                <h3>⚠️ Important Notes</h3>
+                <ul>
+                    <li>The script only works when tracks are selected in Apple Music</li>
+                    <li>Only positive integer BPM values are accepted</li>
+                    <li>The track name must have a dash separator (e.g., "120 - Song Title")</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Get Started?</h2>
+            <p>Download the BPM Automator workflow and streamline your music metadata management.</p>
+            <a href="https://github.com/cjameslok/BPM-Automation/releases/download/0.1.0/BPM_Automation.workflow.zip" class="btn btn-primary btn-large" download>
+                Download Now
+            </a>
+            <p class="secondary-link">
+                <a href="https://github.com/cjameslok/BPM-Automation" target="_blank">View on GitHub →</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BPM Automator. Built with ♪ for Apple Music lovers.</p>
+            <p>
+                <a href="https://github.com/cjameslok/BPM-Automation" target="_blank">GitHub Repository</a> •
+                <a href="https://github.com/cjameslok/BPM-Automation/issues" target="_blank">Report an Issue</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
