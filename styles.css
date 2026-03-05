@@ -48,6 +48,20 @@ code {
     box-shadow: 0 10px 30px rgba(255, 87, 34, 0.2);
 }
 
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -79,7 +93,51 @@ code {
 .tagline {
     font-size: 18px;
     opacity: 0.95;
-    margin-top: 8px;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.btn-github {
+    background: #24292f;
+    color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(36,41,47,0.08);
+}
+
+.btn-github:hover {
+    background: #444d56;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-tiktok {
+    background: #010101;
+    color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(1,1,1,0.08);
+}
+
+.btn-tiktok:hover {
+    background: #fff;
+    color: #010101;
 }
 
 /* Hero Section */
@@ -223,8 +281,10 @@ code {
 }
 
 .step-number {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     border-radius: 50%;
     display: flex;
@@ -250,7 +310,7 @@ code {
 
 .step-content ol {
     list-style-position: inside;
-    color: var(--text-secondary);
+    color: var (--text-secondary);
     margin-left: 20px;
 }
 
@@ -360,9 +420,24 @@ code {
         padding: 40px 20px;
     }
 
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        order: 2;
+    }
+
     .logo {
         flex-direction: column;
         gap: 10px;
+        order: 1;
     }
 
     .header h1 {
@@ -371,6 +446,8 @@ code {
 
     .tagline {
         font-size: 16px;
+        order: 1;
+        width: 100%;
     }
 
     .hero {
@@ -404,9 +481,11 @@ code {
     }
 
     .step-number {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
+        width: 48px;
+        min-width: 48px;
+        max-width: 48px;
+        height: 48px;
+        font-size: 22px;
     }
 
     .step-content h3 {
@@ -434,6 +513,21 @@ code {
         padding: 14px 32px;
         font-size: 16px;
     }
+
+    .btn-github {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-tiktok {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-icon {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -454,13 +548,16 @@ code {
     }
 
     .step {
-        grid-template-columns: 1fr;
+        grid-template-columns: 60px 1fr;
     }
 
     .step-number {
-        width: 100%;
-        height: auto;
-        padding: 15px;
+        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        font-size: 18px;
+        padding: 0;
     }
 
     .features-grid {
