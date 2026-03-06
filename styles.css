@@ -43,7 +43,7 @@ code {
 /* Header */
 .header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(255, 87, 34, 0.2);
 }
@@ -417,7 +417,7 @@ code {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        padding: 40px 20px;
+        /*padding: 40px 20px;*/
     }
 
     .header-flex {
